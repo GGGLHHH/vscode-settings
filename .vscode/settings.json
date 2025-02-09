@@ -6,12 +6,12 @@
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "boundary",
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Vitesse Dark",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.tabActionLocation": "right",
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "catppuccin-mocha",
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "One Dark Pro More Darker Flat",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "workbench.preferredLightColorTheme": "Vitesse Light",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
@@ -301,4 +301,8 @@
   "windsurf.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
   "windsurf.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
   "editor.fontLigatures": true,
+      "github.copilot.advanced": {
+        "authProvider": "github-enterprise",
+    },
+  "github-enterprise.uri":"https://copilot.aizahuo.com",
 }

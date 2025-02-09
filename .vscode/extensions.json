@@ -12,8 +12,8 @@
 
     // themes & icons
     "antfu.icons-carbon",
-    "antfu.theme-vitesse",
     "file-icons.file-icons",
+    "zhuangtongfa.material-theme",
     "sainnhe.gruvbox-material",
 
     // life savers!
@@ -34,6 +34,6 @@
     "unional.vscode-sort-package-json",
     "voorjaar.windicss-intellisense",
     "WakaTime.vscode-wakatime",
-    "znck.grammarly"
+    "znck.grammarly",
   ]
 }
