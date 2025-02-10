@@ -56,7 +56,7 @@
     "when": "workbench.panel.output.active"
   },
   {
-    "key": "shift+cmd+u",
+    "key": "cmd+]",
     "command": "cursorRedo"
   },
   {
@@ -120,5 +120,29 @@
     "key": "alt+escape",
     "command": "-editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+b",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "cmd+[",
+    "command": "cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+u",
+    "command": "-cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+[",
+    "command": "-editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+]",
+    "command": "-editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]

@@ -308,4 +308,6 @@
   "windsurf.autoExecutionPolicy": "off",
   "windsurf.showSelectionActions": false,
   "windsurf.showExplainProblemInlayHint": false,
+  "windsurf.autocompleteSpeed": "fast",
+  "explorer.confirmPasteNative": false,
 }
