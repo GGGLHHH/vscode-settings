@@ -310,4 +310,7 @@
   "windsurf.showExplainProblemInlayHint": false,
   "windsurf.autocompleteSpeed": "fast",
   "explorer.confirmPasteNative": false,
+  "npm.keybindingsChangedWarningShown": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "windsurf.explainAndFixInCurrentConversation": true,
 }
