@@ -1,15 +1,13 @@
 {
   "import": {
-    "scope": "javascript,typescript",
-    "prefix": "im",
+    "prefix": "import",
     "body": [
-      "import { $1 } from '$2';"
+      "import { $2 } from '$1';"
     ],
     "description": "Import a module"
   },
   "export-all": {
-    "scope": "javascript,typescript",
-    "prefix": "ex",
+    "prefix": "exexport",
     "body": [
       "export * from '$2';"
     ],
