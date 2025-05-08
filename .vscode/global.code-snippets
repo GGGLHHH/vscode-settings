@@ -13,4 +13,11 @@
     ],
     "description": "Export a module"
   },
+  "console-log": {
+    "prefix": "cl",
+    "body": [
+      "console.log('$2');"
+    ],
+    "description": "Log a message to the console"
+  }
 }
