@@ -1,11 +1,9 @@
 {
   "recommendations": [
     // my extensions, ofc :P
-    "antfu.browse-lite",
     "antfu.iconify",
     "antfu.slidev",
     "antfu.unocss",
-    "antfu.vite",
     "antfu.where-am-i",
     "antfu.open-in-github-button",
     "lokalise.i18n-ally",
@@ -33,7 +31,6 @@
     "richie5um2.vscode-sort-json",
     "unional.vscode-sort-package-json",
     "voorjaar.windicss-intellisense",
-    "WakaTime.vscode-wakatime",
     "znck.grammarly",
   ]
 }
