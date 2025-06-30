@@ -40,7 +40,7 @@
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.simpleDialog.enable": true,
+  "files.simpleDialog.enable": false,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
