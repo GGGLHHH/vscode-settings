@@ -18,7 +18,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
-
   // ========== Editor ========== 
   "debug.onTaskErrors": "debugAnyway",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -80,14 +79,12 @@
     "**/CHANGELOG*": true,
     "**/LICENSE*": true,
   },
-
   // ==========  Global Level Config, needs to put in User Settings ========== 
   "window.dialogStyle": "custom",
   "window.nativeTabs": true, // this is great, macOS only
   "window.title": "${rootName}", // this make tabs more readable
   "window.titleBarStyle": "custom",
   "extensions.autoUpdate": "onlyEnabledExtensions",
-
   // ========== Extension configs ========== 
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
@@ -100,7 +97,6 @@
     "Grammarly",
     "eslint"
   ],
-
   // ESLint config: https://github.com/antfu/eslint-config
   "eslint.codeAction.showDocumentation": {
     "enable": true
@@ -108,16 +104,46 @@
   "eslint.quiet": true,
   // Silent the stylistic rules in you IDE, but still auto fix them
   "eslint.rules.customizations": [
-    { "rule": "style/*", "severity": "off" },
-    { "rule": "format/*", "severity": "off" },
-    { "rule": "*-indent", "severity": "off" },
-    { "rule": "*-spacing", "severity": "off" },
-    { "rule": "*-spaces", "severity": "off" },
-    { "rule": "*-order", "severity": "off" },
-    { "rule": "*-dangle", "severity": "off" },
-    { "rule": "*-newline", "severity": "off" },
-    { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
+    {
+      "rule": "style/*",
+      "severity": "off"
+    },
+    {
+      "rule": "format/*",
+      "severity": "off"
+    },
+    {
+      "rule": "*-indent",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spacing",
+      "severity": "off"
+    },
+    {
+      "rule": "*-spaces",
+      "severity": "off"
+    },
+    {
+      "rule": "*-order",
+      "severity": "off"
+    },
+    {
+      "rule": "*-dangle",
+      "severity": "off"
+    },
+    {
+      "rule": "*-newline",
+      "severity": "off"
+    },
+    {
+      "rule": "*quotes",
+      "severity": "off"
+    },
+    {
+      "rule": "*semi",
+      "severity": "off"
+    }
   ],
   "eslint.validate": [
     "javascript",
@@ -132,7 +158,6 @@
     "yaml",
     "toml"
   ],
-
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
@@ -195,13 +220,11 @@
   "iconify.annotations": true,
   "iconify.inplace": true,
   "svg.preview.mode": "svg",
-
   // I only use Prettier for manually formatting
   "prettier.enable": false,
   "prettier.printWidth": 200,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-
   // ========== File Nesting ==========
   // this might not be up to date with the repo, please check yourself
   // https://github.com/antfu/vscode-file-nesting-config
@@ -313,5 +336,41 @@
   "npm.keybindingsChangedWarningShown": true,
   "security.workspace.trust.untrustedFiles": "open",
   "windsurf.explainAndFixInCurrentConversation": true,
-  "workbench.editor.enablePreview":false
+  "workbench.editor.enablePreview": false,
+  "github.copilot.advanced": {
+    "authProvider": "github-enterprise",
+  },
+  "github-enterprise.uri": "https://cp.acce.dev",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  // ========== GitHub Copilot Commit Message Configuration ==========
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Follow Angular commit message conventions strictly"
+    },
+    {
+      "text": "Format: type(scope): subject"
+    },
+    {
+      "text": "Types: build, ci, docs, feat, fix, perf, refactor, style, test"
+    },
+    {
+      "text": "Subject: imperative mood, lowercase, no period, max 50 characters"
+    },
+    {
+      "text": "Include scope when relevant (e.g., auth, api, ui, core)"
+    },
+    {
+      "text": "Use present tense: 'add feature' not 'added feature'"
+    },
+    {
+      "text": "Must be in English only"
+    },
+    {
+      "text": "Examples: 'feat(auth): add OAuth2 login support', 'fix(api): resolve user validation error', 'docs(readme): update installation instructions'"
+    }
+  ],
 }
