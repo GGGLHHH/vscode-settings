@@ -313,4 +313,5 @@
   "npm.keybindingsChangedWarningShown": true,
   "security.workspace.trust.untrustedFiles": "open",
   "windsurf.explainAndFixInCurrentConversation": true,
+  "workbench.editor.enablePreview":false
 }
