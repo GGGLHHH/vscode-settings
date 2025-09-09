@@ -23,7 +23,6 @@
 
     // up to you
     "amodio.tsl-problem-matcher",
-    "eamodio.gitlens",
     "EditorConfig.EditorConfig",
     "GitHub.vscode-pull-request-github",
     "mpontus.tab-cycle",
