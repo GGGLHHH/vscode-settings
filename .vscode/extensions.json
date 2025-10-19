@@ -29,6 +29,7 @@
     "unional.vscode-sort-package-json",
     "voorjaar.windicss-intellisense",
 
-    "MS-CEINTL.vscode-language-pack-zh-hans"
+    "MS-CEINTL.vscode-language-pack-zh-hans",
+    "ritwickdey.LiveServer"
   ]
 }
