@@ -373,4 +373,41 @@
       "text": "Examples: 'feat(auth): add OAuth2 login support', 'fix(api): resolve user validation error', 'docs(readme): update installation instructions'"
     }
   ],
+  "git.openRepositoryInParentFolders": "never",
+  "cSpell.userWords": [
+    "attributify",
+    "Bnak",
+    "commonif",
+    "Eino",
+    "Invokable",
+    "jwtpkg",
+    "llmagent",
+    "mcpprotocol",
+    "pgcrypto",
+    "pgxpool",
+    "Respwd",
+    "SSEMCP",
+    "traceid",
+    "unocss",
+    "unplugin",
+    "Upregister"
+  ],
+  "terminal.integrated.stickyScroll.enabled": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "window.confirmSaveUntitledWorkspace": false,
+  "makefile.configureOnOpen": false,
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "git.blame.editorDecoration.enabled": true,
+  "go.formatTool": "gofumpt",
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": {
+    "formatting.gofumpt": true,
+    "ui.semanticTokens": true
+  },
+  "editor.links": false
 }
