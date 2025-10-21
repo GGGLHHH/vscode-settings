@@ -1,7 +1,7 @@
 {
   // ========== Visuals ==========
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.fontFamily": "Input Mono, monospace",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font, monospace",
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "interval",
   "editor.renderWhitespace": "boundary",
@@ -11,7 +11,7 @@
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "file-icons",
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "One Dark Pro Night Flat",
+  "workbench.preferredDarkColorTheme": "Vitesse Dark Soft",
   "workbench.preferredLightColorTheme": "Vitesse Light",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
@@ -47,6 +47,7 @@
   "scm.diffDecorationsGutterWidth": 2,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
@@ -337,9 +338,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "windsurf.explainAndFixInCurrentConversation": true,
   "workbench.editor.enablePreview": false,
-  "github.copilot.advanced": {
-    "authProvider": "github-enterprise",
-  },
+  "github.copilot.advanced": {},
   "github-enterprise.uri": "https://cp.acce.dev",
   "github.copilot.nextEditSuggestions.enabled": true,
   "window.commandCenter": false,
@@ -409,5 +408,33 @@
     "formatting.gofumpt": true,
     "ui.semanticTokens": true
   },
-  "editor.links": false
+  "editor.links": false,
+  // ========== 终端配置 ==========
+  // 集成终端默认使用 Fish
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/opt/homebrew/bin/fish",
+      "args": [],
+      "icon": "terminal-bash"
+    },
+    "bash": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ]
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.scrollback": 10000,
+  // 外部终端使用 iTerm2
+  "terminal.external.osxExec": "iTerm.app",
+  "extensions.ignoreRecommendations": true
 }

@@ -7,19 +7,16 @@
     "antfu.where-am-i",
     "antfu.open-in-github-button",
     "lokalise.i18n-ally",
-
     // themes & icons
     "antfu.icons-carbon",
     "file-icons.file-icons",
     "zhuangtongfa.material-theme",
     "sainnhe.gruvbox-material",
-
     // life savers!
     "dbaeumer.vscode-eslint",
     "Vue.volar",
     "GitHub.copilot",
     "usernamehw.errorlens",
-
     // up to you
     "amodio.tsl-problem-matcher",
     "EditorConfig.EditorConfig",
@@ -28,8 +25,10 @@
     "richie5um2.vscode-sort-json",
     "unional.vscode-sort-package-json",
     "voorjaar.windicss-intellisense",
-
     "MS-CEINTL.vscode-language-pack-zh-hans",
-    "ritwickdey.LiveServer"
+    "ritwickdey.LiveServer",
+    "golang.Go",
+    "bradlc.vscode-tailwindcss",
+    "antfu.theme-vitesse"
   ]
 }
