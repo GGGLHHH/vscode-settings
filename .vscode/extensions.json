@@ -29,6 +29,8 @@
     "ritwickdey.LiveServer",
     "golang.Go",
     "bradlc.vscode-tailwindcss",
-    "antfu.theme-vitesse"
+    "antfu.theme-vitesse",
+    "antfu.file-nesting",
+    "antfu.goto-alias"
   ]
 }
