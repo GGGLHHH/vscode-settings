@@ -2,7 +2,52 @@
 
 [`.vscode/settings.json`](./.vscode/settings.json)<br>
 [`.vscode/extensions.json`](./.vscode/extensions.json)<br>
-[`.vscode/global.code-snippets`](./.vscode/global.code-snippets)
+[`.vscode/keybindings.json`](./.vscode/keybindings.json)
+
+## 📦 安装
+
+使用自动化脚本创建软链接到 VSCode 全局配置目录：
+
+```bash
+# 克隆仓库
+git clone <repository-url> ~/vscode-settings
+cd ~/vscode-settings
+
+# 运行安装脚本
+./install.sh
+```
+
+安装脚本会：
+- ✅ 自动检测操作系统（macOS/Linux）
+- ✅ 备份现有配置文件
+- ✅ 创建软链接到 VSCode User 目录
+- ✅ 提供详细的操作反馈
+
+### 卸载
+
+如果需要删除软链接并恢复原始配置：
+
+```bash
+./uninstall.sh
+```
+
+### 手动安装（可选）
+
+如果你更喜欢手动操作：
+
+**macOS:**
+```bash
+ln -s ~/vscode-settings/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/vscode-settings/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/vscode-settings/.vscode/extensions.json ~/Library/Application\ Support/Code/User/extensions.json
+```
+
+**Linux:**
+```bash
+ln -s ~/vscode-settings/.vscode/settings.json ~/.config/Code/User/settings.json
+ln -s ~/vscode-settings/.vscode/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s ~/vscode-settings/.vscode/extensions.json ~/.config/Code/User/extensions.json
+```
 
 <br>
 <br>
