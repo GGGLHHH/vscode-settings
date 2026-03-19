@@ -1,36 +1,52 @@
 {
   "recommendations": [
-    // my extensions, ofc :P
+    // antfu
     "antfu.iconify",
-    "antfu.slidev",
+    "antfu.icons-carbon",
+    "antfu.open-in-github-button",
+    "antfu.theme-vitesse",
     "antfu.unocss",
     "antfu.where-am-i",
-    "antfu.open-in-github-button",
-    "lokalise.i18n-ally",
+    // ai
+    "anthropic.claude-code",
+    "github.copilot-chat",
+    "openai.chatgpt",
+    "sst-dev.opencode",
     // themes & icons
-    "antfu.icons-carbon",
     "file-icons.file-icons",
     "zhuangtongfa.material-theme",
-    "sainnhe.gruvbox-material",
-    // life savers!
+    // languages
+    "golang.go",
+    "vue.volar",
+    "rust-lang.rust-analyzer",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "ms-python.vscode-python-envs",
+    "charliermarsh.ruff",
+    // frontend
+    "bradlc.vscode-tailwindcss",
+    "lokalise.i18n-ally",
+    "vitest.explorer",
+    "voidzero.vite-plus-extension-pack",
+    // linter & formatter
     "dbaeumer.vscode-eslint",
-    "Vue.volar",
-    "GitHub.copilot",
-    "usernamehw.errorlens",
-    // up to you
+    "biomejs.biome",
+    "oxc.oxc-vscode",
+    "editorconfig.editorconfig",
+    // git & github
+    "github.vscode-pull-request-github",
+    "fabiospampinato.vscode-open-in-github",
+    // tools
     "amodio.tsl-problem-matcher",
-    "EditorConfig.EditorConfig",
-    "GitHub.vscode-pull-request-github",
+    "bierner.markdown-mermaid",
+    "ms-ceintl.vscode-language-pack-zh-hans",
     "naumovs.color-highlight",
     "richie5um2.vscode-sort-json",
+    "ritwickdey.liveserver",
+    "tamasfe.even-better-toml",
     "unional.vscode-sort-package-json",
-    "voorjaar.windicss-intellisense",
-    "MS-CEINTL.vscode-language-pack-zh-hans",
-    "ritwickdey.LiveServer",
-    "golang.Go",
-    "bradlc.vscode-tailwindcss",
-    "antfu.theme-vitesse",
-    "antfu.file-nesting",
-    "antfu.goto-alias"
+    "usernamehw.errorlens",
+    "vadimcn.vscode-lldb"
   ]
 }

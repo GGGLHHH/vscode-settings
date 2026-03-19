@@ -399,7 +399,11 @@
   "terminal.integrated.smoothScrolling": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "git.blame.editorDecoration.enabled": true,
-  "go.formatTool": "gofumpt",
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  // "go.formatTool": "gofumpt",
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go"
@@ -434,7 +438,38 @@
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.enableKittyKeyboardProtocol": false,
   // 外部终端使用 iTerm2
   "terminal.external.osxExec": "iTerm.app",
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "githubPullRequests.pullBranch": "never",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "opus",
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.initialPermissionMode": "bypassPermissions",
+  "go.toolsManagement.autoUpdate": true,
+  "chat.viewSessions.orientation": "stacked",
+  "terminal.integrated.initialHint": false,
+  "chatgpt.localeOverride": "zh-CN",
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "class:list",
+    "tableClass"
+  ],
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://developer.microsoft.com/json-schemas/": true,
+    "https://biomejs.dev": true
+  }
 }

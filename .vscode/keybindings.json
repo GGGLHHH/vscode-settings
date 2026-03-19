@@ -176,5 +176,13 @@
   {
     "key": "cmd+p",
     "command": "git.openFile"
+  },
+  {
+    "key": "alt+g",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine"
   }
 ]
