@@ -10,8 +10,6 @@
     // ai
     "anthropic.claude-code",
     "github.copilot-chat",
-    "openai.chatgpt",
-    "sst-dev.opencode",
     // themes & icons
     "file-icons.file-icons",
     "zhuangtongfa.material-theme",

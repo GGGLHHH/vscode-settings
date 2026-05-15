@@ -16,6 +16,7 @@
   "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.browser.openLocalhostLinks": false,
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
   // ========== Editor ========== 
@@ -51,6 +52,8 @@
   "terminal.integrated.fontWeight": "300",
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
+  "simpleBrowser.useIntegratedBrowser": false,
+  "livePreview.useIntegratedBrowser": false,
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
@@ -413,6 +416,9 @@
     "ui.semanticTokens": true
   },
   "editor.links": false,
+  "workbench.externalUriOpeners": {
+    "*": "default"
+  },
   // ========== 终端配置 ==========
   // 集成终端默认使用 Fish
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -471,5 +477,12 @@
     "https://json-schema.org/": true,
     "https://developer.microsoft.com/json-schemas/": true,
     "https://biomejs.dev": true
-  }
+  },
+  "oxc.enable.oxlint": true,
+  "oxc.enable": true,
+  "oxc.fixKind": "dangerous_fix_or_suggestion",
+  "oxc.lint.run": "onSave",
+  "oxc.trace.server": "verbose",
+  "update.showReleaseNotes": false,
+  "workbench.browser.openLocalhostLinks": false,
 }
