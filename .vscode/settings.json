@@ -406,13 +406,25 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
   },
-  // "go.formatTool": "gofumpt",
   "[go]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "golang.go"
   },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--path-mode=abs",
+    "--fast-only"
+  ],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": [
+    "fmt",
+    "--stdin"
+  ],
   "gopls": {
-    "formatting.gofumpt": true,
+    "formatting.gofumpt": false,
     "ui.semanticTokens": true
   },
   "editor.links": false,
@@ -448,7 +460,6 @@
   // 外部终端使用 iTerm2
   "terminal.external.osxExec": "iTerm.app",
   "extensions.ignoreRecommendations": true,
-  "python.analysis.typeCheckingMode": "standard",
   "githubPullRequests.pullBranch": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
@@ -485,4 +496,8 @@
   "oxc.trace.server": "verbose",
   "update.showReleaseNotes": false,
   "workbench.browser.openLocalhostLinks": false,
+  "tailwindCSS.classFunctions": [
+    "cn"
+  ],
+  "claudeCode.claudeProcessWrapper": "reclaude",
 }

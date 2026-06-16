@@ -184,5 +184,15 @@
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "shift+cmd+=",
+    "command": "-workbench.action.browser.zoomIn",
+    "when": "browserFocused && browserHasUrl && !browserHasError && activeEditor == 'workbench.editor.browser'"
+  },
+  {
+    "key": "shift+cmd+-",
+    "command": "-workbench.action.browser.zoomOut",
+    "when": "browserFocused && browserHasUrl && !browserHasError && activeEditor == 'workbench.editor.browser'"
   }
 ]
