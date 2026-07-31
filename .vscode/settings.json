@@ -38,6 +38,9 @@
   },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*ignore": "ignore"
+  },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": false,
@@ -88,7 +91,7 @@
   "window.nativeTabs": true, // this is great, macOS only
   "window.title": "${rootName}", // this make tabs more readable
   "window.titleBarStyle": "custom",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.autoUpdate": "on",
   // ========== Extension configs ========== 
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": false,
@@ -500,4 +503,5 @@
     "cn"
   ],
   "claudeCode.claudeProcessWrapper": "reclaude",
+  "python.analysis.typeCheckingMode": "strict",
 }
