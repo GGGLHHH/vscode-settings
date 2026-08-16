@@ -32,6 +32,11 @@ detect_vscode_config_dir() {
 
 VSCODE_USER_DIR=$(detect_vscode_config_dir)
 
+# Zed 配置目录（macOS 与 Linux 相同）
+# 注意：源目录用 zed/ 而非 .zed/ —— .zed/settings.json 会被 Zed 当作项目级设置校验，用户级键会报 warning
+ZED_SOURCE_DIR="${SCRIPT_DIR}/zed"
+ZED_USER_DIR="$HOME/.config/zed"
+
 # 打印信息
 print_info() {
     echo -e "${BLUE}ℹ${NC} $1"
@@ -94,10 +99,10 @@ check_vscode_dir() {
     fi
 }
 
-# 备份现有配置文件
+# 备份现有配置文件（参数：目标文件完整路径）
 backup_existing_file() {
-    local file=$1
-    local target="$VSCODE_USER_DIR/$file"
+    local target=$1
+    local file=$(basename "$target")
 
     if [[ -e "$target" ]] && [[ ! -L "$target" ]]; then
         local backup="${target}.backup.$(date +%Y%m%d_%H%M%S)"
@@ -111,23 +116,22 @@ backup_existing_file() {
     fi
 }
 
-# 创建软链接
+# 创建软链接（参数：源文件完整路径、目标文件完整路径）
 create_symlink() {
-    local file=$1
-    local source="$CONFIG_SOURCE_DIR/$file"
-    local target="$VSCODE_USER_DIR/$file"
+    local source=$1
+    local target=$2
 
     if [[ ! -f "$source" ]]; then
-        print_warning "跳过不存在的文件: $file"
+        print_warning "跳过不存在的文件: $source"
         return
     fi
 
     # 备份现有文件
-    backup_existing_file "$file"
+    backup_existing_file "$target"
 
     # 创建软链接
     ln -s "$source" "$target"
-    print_success "已创建软链接: $file"
+    print_success "已创建软链接: $target -> $source"
 }
 
 # 主函数
@@ -154,7 +158,12 @@ main() {
     local files=("settings.json" "keybindings.json" "extensions.json")
     for file in "${files[@]}"; do
         if [[ -f "$CONFIG_SOURCE_DIR/$file" ]]; then
-            echo "  • $file"
+            echo "  • VSCode: $file"
+        fi
+    done
+    for file in settings.json keymap.json; do
+        if [[ -f "$ZED_SOURCE_DIR/$file" ]]; then
+            echo "  • Zed: $file"
         fi
     done
     echo
@@ -171,7 +180,13 @@ main() {
 
     # 创建软链接
     for file in "${files[@]}"; do
-        create_symlink "$file"
+        create_symlink "$CONFIG_SOURCE_DIR/$file" "$VSCODE_USER_DIR/$file"
+    done
+
+    # Zed
+    mkdir -p "$ZED_USER_DIR"
+    for file in settings.json keymap.json; do
+        create_symlink "$ZED_SOURCE_DIR/$file" "$ZED_USER_DIR/$file"
     done
 
     echo

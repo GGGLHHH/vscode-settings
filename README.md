@@ -2,7 +2,9 @@
 
 [`.vscode/settings.json`](./.vscode/settings.json)<br>
 [`.vscode/extensions.json`](./.vscode/extensions.json)<br>
-[`.vscode/keybindings.json`](./.vscode/keybindings.json)
+[`.vscode/keybindings.json`](./.vscode/keybindings.json)<br>
+[`zed/settings.json`](./zed/settings.json)<br>
+[`zed/keymap.json`](./zed/keymap.json)
 
 ## 📦 安装
 
@@ -47,6 +49,12 @@ ln -s ~/vscode-settings/.vscode/extensions.json ~/Library/Application\ Support/C
 ln -s ~/vscode-settings/.vscode/settings.json ~/.config/Code/User/settings.json
 ln -s ~/vscode-settings/.vscode/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/vscode-settings/.vscode/extensions.json ~/.config/Code/User/extensions.json
+```
+
+**Zed（macOS / Linux 相同）:**
+```bash
+ln -s ~/vscode-settings/zed/settings.json ~/.config/zed/settings.json
+ln -s ~/vscode-settings/zed/keymap.json ~/.config/zed/keymap.json
 ```
 
 <br>

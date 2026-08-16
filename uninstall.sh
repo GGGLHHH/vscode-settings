@@ -45,10 +45,10 @@ print_error() {
     echo -e "${RED}✖${NC} $1"
 }
 
-# 检查并删除软链接
+# 检查并删除软链接（参数：目标文件完整路径）
 remove_symlink() {
-    local file=$1
-    local target="$VSCODE_USER_DIR/$file"
+    local target=$1
+    local file=$(basename "$target")
 
     if [[ -L "$target" ]]; then
         local link_target=$(readlink "$target")
@@ -64,13 +64,13 @@ remove_symlink() {
     fi
 }
 
-# 恢复备份文件
+# 恢复备份文件（参数：目标文件完整路径）
 restore_backup() {
-    local file=$1
-    local target="$VSCODE_USER_DIR/$file"
+    local target=$1
+    local file=$(basename "$target")
 
     # 查找最新的备份文件
-    local latest_backup=$(ls -t "$VSCODE_USER_DIR/${file}.backup."* 2>/dev/null | head -1)
+    local latest_backup=$(ls -t "${target}.backup."* 2>/dev/null | head -1)
 
     if [[ -n "$latest_backup" ]] && [[ ! -e "$target" ]]; then
         read -p "是否恢复备份文件 $(basename "$latest_backup")？(y/N) " -n 1 -r
@@ -99,16 +99,21 @@ main() {
     fi
 
     # 列出要删除的软链接
-    local files=("settings.json" "keybindings.json" "extensions.json")
+    local targets=(
+        "$VSCODE_USER_DIR/settings.json"
+        "$VSCODE_USER_DIR/keybindings.json"
+        "$VSCODE_USER_DIR/extensions.json"
+        "$HOME/.config/zed/settings.json"
+        "$HOME/.config/zed/keymap.json"
+    )
     local found_links=()
 
     print_info "检查软链接..."
-    for file in "${files[@]}"; do
-        local target="$VSCODE_USER_DIR/$file"
+    for target in "${targets[@]}"; do
         if [[ -L "$target" ]]; then
             local link_target=$(readlink "$target")
-            echo "  • $file -> $link_target"
-            found_links+=("$file")
+            echo "  • $target -> $link_target"
+            found_links+=("$target")
         fi
     done
 
@@ -129,14 +134,14 @@ main() {
     print_info "开始删除软链接..."
 
     # 删除软链接
-    for file in "${found_links[@]}"; do
-        remove_symlink "$file"
+    for target in "${found_links[@]}"; do
+        remove_symlink "$target"
     done
 
     echo
     print_info "检查是否有备份文件需要恢复..."
-    for file in "${found_links[@]}"; do
-        restore_backup "$file"
+    for target in "${found_links[@]}"; do
+        restore_backup "$target"
     done
 
     echo

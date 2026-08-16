@@ -1,0 +1,48 @@
+// Zed 键位 — 从 .vscode/keybindings.json 迁移
+// 未迁移：cmd+p -> git.openFile（Zed 无对应动作，cmd+p 保留默认文件搜索）
+[
+  {
+    // cmd+o 打开文件搜索（原 cmd+p）；finder 打开时再按 = 循环下一项
+    // 必须无 context 全局绑定：默认的 cmd-o (workspace::Open) 是全局绑定，
+    // 放在 Workspace context 里会因匹配深度不足而被默认值压住
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-o": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "use_key_equivalents": true,
+    "bindings": {
+      // cmd+1 开关左侧栏（原 cmd+b）
+      "cmd-1": "workspace::ToggleLeftDock",
+      "cmd-t": "git::Pull",
+      "cmd-shift-k": "git::Push",
+      // cmd+b 运行任务
+      "cmd-b": "task::Spawn",
+      "f12": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      // 光标位置后退/前进（原 cursorUndo/cursorRedo，覆盖缩进键）
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward",
+      "cmd-shift-k": "git::Push",
+      "f12": "terminal_panel::Toggle",
+      "shift-space": "editor::ShowCompletions",
+      // shift+cmd+= 全部展开 / shift+cmd+- 全部折叠
+      "cmd-+": "editor::UnfoldAll",
+      "cmd-_": "editor::FoldAll",
+      "alt-g": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "f12": "terminal_panel::Toggle"
+    }
+  }
+]
