@@ -504,4 +504,5 @@
   ],
   "claudeCode.claudeProcessWrapper": "reclaude",
   "python.analysis.typeCheckingMode": "strict",
+  "workbench.experimental.modernUI": true,
 }
