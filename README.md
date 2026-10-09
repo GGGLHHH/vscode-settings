@@ -4,7 +4,8 @@
 [`.vscode/extensions.json`](./.vscode/extensions.json)<br>
 [`.vscode/keybindings.json`](./.vscode/keybindings.json)<br>
 [`zed/settings.json`](./zed/settings.json)<br>
-[`zed/keymap.json`](./zed/keymap.json)
+[`zed/keymap.json`](./zed/keymap.json)<br>
+[`ccstatusline/settings.json`](./ccstatusline/settings.json)
 
 ## 📦 安装
 
@@ -55,6 +56,22 @@ ln -s ~/vscode-settings/.vscode/extensions.json ~/.config/Code/User/extensions.j
 ```bash
 ln -s ~/vscode-settings/zed/settings.json ~/.config/zed/settings.json
 ln -s ~/vscode-settings/zed/keymap.json ~/.config/zed/keymap.json
+```
+
+**ccstatusline-zh（Claude Code 状态栏，macOS / Linux 相同）:**
+```bash
+npm install -g ccstatusline-zh
+ln -s ~/vscode-settings/ccstatusline/settings.json ~/.config/ccstatusline/settings.json
+```
+
+并在 `~/.claude/settings.json` 中启用：
+```json
+"statusLine": {
+  "type": "command",
+  "command": "ccstatusline-zh",
+  "padding": 0,
+  "refreshInterval": 10
+}
 ```
 
 <br>

@@ -105,6 +105,7 @@ main() {
         "$VSCODE_USER_DIR/extensions.json"
         "$HOME/.config/zed/settings.json"
         "$HOME/.config/zed/keymap.json"
+        "$HOME/.config/ccstatusline/settings.json"
     )
     local found_links=()
 

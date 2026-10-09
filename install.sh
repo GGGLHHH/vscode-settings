@@ -37,6 +37,10 @@ VSCODE_USER_DIR=$(detect_vscode_config_dir)
 ZED_SOURCE_DIR="${SCRIPT_DIR}/zed"
 ZED_USER_DIR="$HOME/.config/zed"
 
+# ccstatusline-zh（Claude Code 状态栏）配置目录
+CCSTATUSLINE_SOURCE_DIR="${SCRIPT_DIR}/ccstatusline"
+CCSTATUSLINE_USER_DIR="$HOME/.config/ccstatusline"
+
 # 打印信息
 print_info() {
     echo -e "${BLUE}ℹ${NC} $1"
@@ -166,6 +170,9 @@ main() {
             echo "  • Zed: $file"
         fi
     done
+    if [[ -f "$CCSTATUSLINE_SOURCE_DIR/settings.json" ]]; then
+        echo "  • ccstatusline-zh: settings.json"
+    fi
     echo
 
     read -p "是否继续？(y/N) " -n 1 -r
@@ -188,6 +195,13 @@ main() {
     for file in settings.json keymap.json; do
         create_symlink "$ZED_SOURCE_DIR/$file" "$ZED_USER_DIR/$file"
     done
+
+    # ccstatusline-zh（它保存配置时会解析软链接，写回仓库里的文件）
+    mkdir -p "$CCSTATUSLINE_USER_DIR"
+    create_symlink "$CCSTATUSLINE_SOURCE_DIR/settings.json" "$CCSTATUSLINE_USER_DIR/settings.json"
+    if ! command -v ccstatusline-zh >/dev/null 2>&1; then
+        print_warning "未找到 ccstatusline-zh 命令，请先安装: npm install -g ccstatusline-zh"
+    fi
 
     echo
     echo -e "${GREEN}════════════════════════════════════════${NC}"
