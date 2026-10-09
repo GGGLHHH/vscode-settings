@@ -457,11 +457,16 @@
     }
   },
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.gpuAcceleration": "on",
+  // Claude Code /terminal-setup:GPU 加速开启时集成终端会花屏(原值 "on")
+  "terminal.integrated.gpuAcceleration": "off",
+  // Claude Code /terminal-setup:fullscreen 模式下滚动更跟手
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  // macOS 上 Option 当 Meta,否则 Option+P 切模型 / Option+Enter 换行无效
+  "terminal.integrated.macOptionIsMeta": true,
   "terminal.integrated.scrollback": 10000,
   "terminal.integrated.enableKittyKeyboardProtocol": false,
   // 外部终端使用 iTerm2
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "extensions.ignoreRecommendations": true,
   "githubPullRequests.pullBranch": "never",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -502,7 +507,9 @@
   "tailwindCSS.classFunctions": [
     "cn"
   ],
-  "claudeCode.claudeProcessWrapper": "reclaude",
+  // 已关闭：恢复时取消注释
+  // "claudeCode.claudeProcessWrapper": "reclaude",
   "python.analysis.typeCheckingMode": "strict",
   "workbench.experimental.modernUI": true,
+  "liveServer.settings.donotVerifyTags": true,
 }
