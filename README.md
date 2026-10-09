@@ -5,7 +5,8 @@
 [`.vscode/keybindings.json`](./.vscode/keybindings.json)<br>
 [`zed/settings.json`](./zed/settings.json)<br>
 [`zed/keymap.json`](./zed/keymap.json)<br>
-[`ccstatusline/settings.json`](./ccstatusline/settings.json)
+[`ccstatusline/settings.json`](./ccstatusline/settings.json)<br>
+[`claude/CLAUDE.md`](./claude/CLAUDE.md)
 
 ## 📦 安装
 
@@ -72,6 +73,11 @@ ln -s ~/vscode-settings/ccstatusline/settings.json ~/.config/ccstatusline/settin
   "padding": 0,
   "refreshInterval": 10
 }
+```
+
+**Claude Code 全局记忆（macOS / Linux 相同）:**
+```bash
+ln -s ~/vscode-settings/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
 <br>

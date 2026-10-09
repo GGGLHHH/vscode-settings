@@ -41,6 +41,10 @@ ZED_USER_DIR="$HOME/.config/zed"
 CCSTATUSLINE_SOURCE_DIR="${SCRIPT_DIR}/ccstatusline"
 CCSTATUSLINE_USER_DIR="$HOME/.config/ccstatusline"
 
+# Claude Code 全局记忆（CLAUDE.md）
+CLAUDE_SOURCE_DIR="${SCRIPT_DIR}/claude"
+CLAUDE_USER_DIR="$HOME/.claude"
+
 # 打印信息
 print_info() {
     echo -e "${BLUE}ℹ${NC} $1"
@@ -173,6 +177,9 @@ main() {
     if [[ -f "$CCSTATUSLINE_SOURCE_DIR/settings.json" ]]; then
         echo "  • ccstatusline-zh: settings.json"
     fi
+    if [[ -f "$CLAUDE_SOURCE_DIR/CLAUDE.md" ]]; then
+        echo "  • Claude Code: CLAUDE.md"
+    fi
     echo
 
     read -p "是否继续？(y/N) " -n 1 -r
@@ -202,6 +209,10 @@ main() {
     if ! command -v ccstatusline-zh >/dev/null 2>&1; then
         print_warning "未找到 ccstatusline-zh 命令，请先安装: npm install -g ccstatusline-zh"
     fi
+
+    # Claude Code 全局记忆
+    mkdir -p "$CLAUDE_USER_DIR"
+    create_symlink "$CLAUDE_SOURCE_DIR/CLAUDE.md" "$CLAUDE_USER_DIR/CLAUDE.md"
 
     echo
     echo -e "${GREEN}════════════════════════════════════════${NC}"

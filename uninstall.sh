@@ -106,6 +106,7 @@ main() {
         "$HOME/.config/zed/settings.json"
         "$HOME/.config/zed/keymap.json"
         "$HOME/.config/ccstatusline/settings.json"
+        "$HOME/.claude/CLAUDE.md"
     )
     local found_links=()
 
