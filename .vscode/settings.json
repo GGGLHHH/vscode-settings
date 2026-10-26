@@ -12,7 +12,7 @@
   "workbench.iconTheme": "file-icons",
   "workbench.list.smoothScrolling": true,
   "workbench.preferredDarkColorTheme": "One Dark Pro Night Flat",
-  "workbench.preferredLightColorTheme": "Vitesse Light",
+  "workbench.preferredLightColorTheme": "One Dark Pro Night Flat",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
@@ -512,4 +512,5 @@
   "python.analysis.typeCheckingMode": "strict",
   "workbench.experimental.modernUI": true,
   "liveServer.settings.donotVerifyTags": true,
+  "claudeCode.hideOnboarding": true,
 }
